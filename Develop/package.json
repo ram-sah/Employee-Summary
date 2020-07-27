@@ -1,0 +1,29 @@
+{
+  "name": "profile-generator",
+  "version": "1.0.0",
+  "description": "OOP and testing to generate team profile",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevetrilogy/profile-generator.git"
+  },
+  "author": "Ram Sah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevetrilogy/profile-generator/issues"
+  },
+  "homepage": "https://github.com/stevetrilogy/profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}

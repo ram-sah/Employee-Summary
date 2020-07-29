@@ -1,7 +1,7 @@
 {
-  "name": "profile-generator",
+  "name": "employee-summary",
   "version": "1.0.0",
-  "description": "OOP and testing to generate team profile",
+  "description": "OOP and testing to generate employee profile",
   "main": "app.js",
   "directories": {
     "lib": "lib",
@@ -12,18 +12,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stevetrilogy/profile-generator.git"
+    "url": "git+https://github.com/ram-sah/employee-summary.git"
   },
   "author": "Ram Sah",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stevetrilogy/profile-generator/issues"
+    "url": "https://github.com/ram-sah/employee-summary/issues"
   },
-  "homepage": "https://github.com/stevetrilogy/profile-generator#readme",
+  "homepage": "https://github.com/ram-sah/employee-summary#readme",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "inquirer": "^6.5.2"
   },
   "devDependencies": {
-    "jest": "^24.8.0"
+    "jest": "^24.9.0"
   }
 }

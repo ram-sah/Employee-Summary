@@ -1,7 +1,7 @@
-# Profile Generator
+# Employee-Summary
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![LanguageCount](https://img.shields.io/github/languages/count/ram-sah/Profile-Generator)](https://github.com/ram-sah/Profile-Generator)
+[![LanguageCount](https://img.shields.io/github/languages/count/ram-sah/Employee-Summary)](https://github.com/ram-sah/Employee-Summary)
 
 ## Description: 
 
@@ -18,11 +18,8 @@ This project is licensed under the MIT license.
             
 If you have any questions please contact me at : mohan2036@gmail.com
 ### GitHub Prifile: [ram-sah](https://github.com/ram-sah) 
-### Repository : [Profile-Generator](https://github.com/ram-sah/Profile-Generator)
+### Repository : [Employee-Summary](https://github.com/ram-sah/Employee-Summary)
 ### Video of this project: [Watch-Video](https://google.com/)
 
 
 ## Demo 
-
-# Profile-Generator
-# Profile-Generator

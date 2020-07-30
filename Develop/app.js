@@ -104,6 +104,7 @@ function mainList() {
             }
         });
     }
+    // Making Function for Engineer 
     function addEngineer() {
         inquirer.prompt([
             {
@@ -151,7 +152,7 @@ function mainList() {
                 }
             },
             {
-                type: "input",               
+                type: "input",
                 message: "What is your engineer's GitHub username?",
                 name: "engineerGithub",
                 validate: answer => {
@@ -168,9 +169,71 @@ function mainList() {
             createTeam();
         });
     }
-
-    
-
+    // Making Function for Intern
+    function addIntern() {
+        inquirer.prompt([
+            {
+                type: "input",
+                message: "What is your Intern's name?",
+                name: "internName",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please Enter valid name."
+                }
+            },
+            {
+                type: "input",
+                message: "What is your Intern's Id? ",
+                name: "internId",
+                validate: answer => {
+                    const pass = answer.match(
+                        /^[1-9]\d*$/
+                    );
+                    if (pass) {
+                        // check if duplicate ID
+                        if (idArray.includes(answer)) {
+                            return "This ID is already taken. Plz try another."
+                        } else {
+                            return true;
+                        }
+                    }
+                    return "Please Enter Number between (1 to 9).";
+                }
+            },
+            {
+                type: "input",
+                message: "What is your intern's Email? ",
+                name: "internEmail",
+                validate: answer => {
+                    const pass = answer.match(
+                        /\S+@\S+\.\S+/
+                    );
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please Enter a valid Email.";
+                }
+            },
+            {
+                type: "input",
+                name: "internSchool",
+                message: "What is your intern's school?",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter valid School Name.";
+                }
+            }
+        ]).then(answers => {
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+            teamMembers.push(intern);
+            idArray.push(answers.internId);
+            createTeam();
+        });
+    }
     function buildTeam() {
         fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
     }

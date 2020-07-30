@@ -16,7 +16,7 @@ const idArray = [];
 
 function mainList() {
     function createManager() {
-        console.log("Time to build your team");
+        console.log("Time to build your team, Answer the following questions !");
         inquirer.prompt([
             {
                 type: "input",
@@ -30,12 +30,61 @@ function mainList() {
                     return "Invalid Name try again"
                 }
             },
+            {
+                type: "input",
+                message: "What is your manager's Id? ",
+                name: "managerId",
+                validate: answer => {
+                    const pass = answer.match(
+                        /^[1-9]\d*$/
+                    );
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please Enter Number between (1 to 9).";
+                }
+            },
+            {
+                type: "input",
+                message: "What is your manager's Email? ",
+                name: "managerEmail",
+                validate: answer => {
+                    const pass = answer.match(
+                        /\S+@\S+\.\S+/
+                    );
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please Enter valid Email.";
+                }
+            },
+            {
+                type: "input",
+                message: "What is your manager's office number? ",
+                name: "managerOfficeNumber",
+                validate: answer => {
+                    const pass = answer.match(
+                        /^[1-9]\d*$/
+                    );
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please Enter valid number between (1-9).";
+                }
+            }
         ]).then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
             teamMembers.push(manager);
             idArray.push(answers.managerId);
             createTeam();
         });
+    }
+    function createTeam() {
+        inquirer.prompt([
+            {
+                
+            }
+        ])
     }
     createManager();
 }

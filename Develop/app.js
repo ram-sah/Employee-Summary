@@ -82,9 +82,97 @@ function mainList() {
     function createTeam() {
         inquirer.prompt([
             {
-                
+                type: "list",
+                message: "Select team member to add. ",
+                name: "memberChoice",
+                choices: [
+                    "Engineer",
+                    "Intern",
+                    "I am done with adding team Members"
+                ]
             }
-        ])
+        ]).then(userChoice => {
+            switch (userChoice.memberChoice) {
+                case "Engineer":
+                    addEngineer();
+                    break;
+                case "Intern":
+                    addIntern();
+                    break;
+                default:
+                    buildTeam();
+            }
+        });
+    }
+    function addEngineer() {
+        inquirer.prompt([
+            {
+                type: "input",
+                message: "What is your engineer's name?",
+                name: "engineerName",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please Enter valid name."
+                }
+            },
+            {
+                type: "input",
+                message: "What is your engineer's Id? ",
+                name: "engineerId",
+                validate: answer => {
+                    const pass = answer.match(
+                        /^[1-9]\d*$/
+                    );
+                    if (pass) {
+                        // check if duplicate ID
+                        if (idArray.includes(answer)) {
+                            return "This ID is already taken. Plz try another."
+                        } else {
+                            return true;
+                        }
+                    }
+                    return "Please Enter Number between (1 to 9).";
+                }
+            },
+            {
+                type: "input",
+                message: "What is your engineer's Email? ",
+                name: "engineerEmail",
+                validate: answer => {
+                    const pass = answer.match(
+                        /\S+@\S+\.\S+/
+                    );
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please Enter a valid Email.";
+                }
+            },
+            {
+                type: "input",               
+                message: "What is your engineer's GitHub username?",
+                name: "engineerGithub",
+                validate: answer => {
+                    if (answer !== "") {
+                        return true;
+                    }
+                    return "Please enter valid user name.";
+                }
+            }
+        ]).then(answers => {
+            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+            teamMembers.push(engineer);
+            idArray.push(answers.engineerId);
+            createTeam();
+        });
+    }
+
+    
+
+    function buildTeam() {
+        fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
     }
     createManager();
 }

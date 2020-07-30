@@ -5,7 +5,7 @@
 
 ## Description: 
 
-This project is a command-line application that Generate Employee Profile.
+This project is a command-line application that Generate Employee Profile. This Application has option to choose  Manager, Engineer and intern. For every engineer, you enter their name, id, email and github. For an intern, intead of entering their github information, you enter what school they studied at. When the information has been entered, a HTML page will generate with the information in a neat fashion.
 
 ## License 
             

@@ -5,12 +5,45 @@
 
 ## Description: 
 
-This project is a command-line application that Generate Employee Profile. This Application has option to choose  Manager, Engineer and intern. For every engineer, you enter their name, id, email and github. For an intern, intead of entering their github information, you enter what school they studied at. When the information has been entered, a HTML page will generate with the information in a neat fashion.
+This project is a command-line application that Generate Employee Profile. It utilizes (fs) for writing the file, (render) for path of the file and (inquirer) to ask the questions.This Application has option to choose Engineer, Intern and Done with adding members. For every Engineer, you enter their name, id, email and github. For an Intern, intead of entering their github information, you enter what school they studied at. And last option is to stop adding members. When the information has been entered, a HTML page will generate with the information in a neat fashion.
+         
+## Table of Contents
+       
+* [Installation](#installation)
+            
+* [Usage](#usage)
+            
+* [License](#license)
+            
+* [Tests](#tests)
+            
+* [Questions](#Questions)
+
+* [Demo](#Demo)
+         
+## Installation
+            
+To install necessary dependencies, run the following command:
+            
+```
+npm install
+```
+        
+## Usage
+            
+Run 'node app.js' from Terminal
 
 ## License 
             
 This project is licensed under the MIT license.
             
+## Tests
+            
+To run tests, run the following command:
+            
+```
+npm test run
+```
 
 ## Questions
             

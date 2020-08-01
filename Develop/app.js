@@ -9,8 +9,6 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
 const teamMembers = [];
 const idArray = [];
 
@@ -76,9 +74,11 @@ function mainList() {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
             teamMembers.push(manager);
             idArray.push(answers.managerId);
+            // calling createTeam function to choose next team member. 
             createTeam();
         });
     }
+    // Function to choose team members 
     function createTeam() {
         inquirer.prompt([
             {
@@ -234,15 +234,20 @@ function mainList() {
             createTeam();
         });
     }
-    function buildTeam() {
+    function buildTeam() {        
         fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+        console.log("PLEASE OPEN 'team.html' at 'output' FOLDER TO SEE THE RESULT");
     }
     createManager();
 }
 mainList();
+
+// Write code to use inquirer to gather information about the development team members,
+// and to create objects for each team member (using the correct classes as blueprints!)
+
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
-// generate and return a block of HTML including templated divs for each employee!
+// generate and return a block of HTML including templated divs for each employee!   
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the

@@ -56,3 +56,10 @@ If you have any questions please contact me at : mohan2036@gmail.com
 
 
 ## Demo 
+![Employee-Summary](https://user-images.githubusercontent.com/64625123/89113935-07634680-d445-11ea-8849-44d82578d7c1.gif)
+
+## Test Clips
+![test-passed](https://user-images.githubusercontent.com/64625123/89114211-dc2e2680-d447-11ea-95f6-29195d0b7be1.png)
+
+
+![My-Team](https://user-images.githubusercontent.com/64625123/89114399-d6d1db80-d449-11ea-9b48-54b185725ef0.jpg)

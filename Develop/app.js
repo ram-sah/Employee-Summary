@@ -39,7 +39,7 @@ function mainList() {
                     if (pass) {
                         return true;
                     }
-                    return "Please Enter Number between (1 to 9).";
+                    return "Please Enter Positive number.";
                 }
             },
             {
@@ -134,7 +134,7 @@ function mainList() {
                             return true;
                         }
                     }
-                    return "Please Enter Number between (1 to 9).";
+                    return "Please Enter Positive number.";
                 }
             },
             {
@@ -199,7 +199,7 @@ function mainList() {
                             return true;
                         }
                     }
-                    return "Please Enter Number between (1 to 9).";
+                    return "Please Enter Positive number.";
                 }
             },
             {

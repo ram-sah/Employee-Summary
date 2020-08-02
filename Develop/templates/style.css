@@ -1,0 +1,37 @@
+/* Styling the HTMl */
+
+body {
+    width: 100%;    
+    background-image: url(../clips/background.jpg);
+    background-repeat: round;
+    background-size: auto;
+}
+.jumbotron {
+    background-color:  #0e06049a;
+    color: #ffffff;
+    font-weight: 800!important;
+    padding: 1rem;
+}
+.card {
+    margin: 10px;
+    background-color:#93bfec;
+}
+.card-header {
+    color: #ffffff;
+    background-color:#007bff;
+}
+.list-group-item {
+    background-color: gray;
+    color:white;
+}
+.list-group-item a {
+    color: white;
+}
+.team-area {
+    display: inline-block;
+    flex-wrap: wrap;
+}
+#manager {
+    margin-right: 75%;
+    flex: content;
+}
